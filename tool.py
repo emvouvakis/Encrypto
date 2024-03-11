@@ -12,17 +12,18 @@ class Crypt:
             algorithm=hashes.SHA256(),
             length=32,
             salt=self.salt,
-            iterations=390000,
+            iterations=480000,
             backend=default_backend()
         )
-        self.handler = base64.urlsafe_b64encode(kdf.derive(key.encode()))
+
+        handler = base64.urlsafe_b64encode(kdf.derive(key.encode()))
+        
+        self.f = Fernet(handler)
 
     def encrypt_password(self, password):
-        f = Fernet(self.handler)
-        encrypted_password = f.encrypt(password.encode()).decode()
+        encrypted_password = self.f.encrypt(password.encode()).decode()
         return encrypted_password
 
     def decrypt_password(self, encrypted_password):
-        f = Fernet(self.handler)
-        decrypted_password = f.decrypt(encrypted_password).decode()
+        decrypted_password = self.f.decrypt(encrypted_password).decode()
         return decrypted_password

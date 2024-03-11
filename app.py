@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from tool import Crypt
 
+# Customizing app
 def customize():
 
     st.set_page_config(layout="wide", page_title='Encrypto', page_icon='🔒', menu_items=None)
@@ -10,12 +11,13 @@ def customize():
         style = f'<style>{f.read()}</style>'
         st.markdown(style, unsafe_allow_html=True)
 
-# Function to load CSV and encrypt passwords
+# Function to decrypt the passwords
 def decrypt_file(df, key, salt):
     crypt = Crypt(key, salt)
     df.loc[:,'password'] = df['password'].apply(crypt.decrypt_password)
     return df
 
+# Function to encrypt the passwords
 def encrypt_file(df, key):
     crypt = Crypt(key)
     
@@ -26,7 +28,7 @@ def encrypt_file(df, key):
 
 
 customize()
-st.title("Encrypto 🔒")
+st.title("Encrypto 🔒", anchor=False)
 
 def cleaning():
     st.session_state.df = None
