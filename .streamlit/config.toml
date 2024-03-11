@@ -1,0 +1,13 @@
+[theme]
+primaryColor = "#F9C23C"
+backgroundColor = "#121212"
+secondaryBackgroundColor = "#333333"
+font = "sans serif"
+textColor = "fafafa"
+
+[server]
+maxUploadSize=200
+enableXsrfProtection=false
+
+[ui]
+hideTopBar = true
