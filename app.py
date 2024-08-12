@@ -166,7 +166,7 @@ if isinstance(st.session_state.df, pd.DataFrame):
                             st.success('File downloaded successfully', icon="✅")
 
                     # Save DataFrame as CSV to Google Drive
-                    if mode == 'Goodle Drive' and "auth" in st.session_state and st.button('Upload to Goodle Drive', use_container_width=True):
+                    if mode == 'Google Drive' and "auth" in st.session_state and st.button('Upload to Goodle Drive', use_container_width=True):
                             
                         token = st.session_state["token"]
                         drive_handler = GoogleDriveHandler(token, CLIENT_ID, CLIENT_SECRET)
