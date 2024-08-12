@@ -175,6 +175,6 @@ if isinstance(st.session_state.df, pd.DataFrame):
 
 
                 except Exception as e:
-                    st.error(f'Please fill both `username` and `password` fields.')   
+                    st.error(f'Please fill both `username` and `password` fields.{e}')   
     elif not key:
         st.warning('Key is needed.')             
