@@ -154,6 +154,7 @@ if isinstance(st.session_state.df, pd.DataFrame):
                     return res
                 
                 try:
+                    csv = convert_df(decrypted_df)
                     if mode == 'Local File':
                         csv = convert_df(decrypted_df)
                         if st.download_button(
@@ -175,6 +176,6 @@ if isinstance(st.session_state.df, pd.DataFrame):
 
 
                 except Exception as e:
-                    st.error(f'Please fill both `username` and `password` fields.{e}')   
+                    st.error(f'Please fill both `username` and `password` fields.')   
     elif not key:
         st.warning('Key is needed.')             
