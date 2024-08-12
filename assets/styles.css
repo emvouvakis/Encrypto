@@ -11,10 +11,10 @@ div.row-widget.stRadio > div {
     margin: 4px;
    }
 
-iframe {
+/* iframe {
     visibility: hidden;
     height: 2rem;
-}
+} */
 
 [data-testid = "stHeader"]{
     visibility: hidden;
