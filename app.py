@@ -97,7 +97,8 @@ if mode=='Google Drive':
             result = oauth2.authorize_button(
                 name="Continue with Google",
                 icon="https://www.google.com.tw/favicon.ico",
-                redirect_uri="https://encrypto.streamlit.app/component/streamlit_oauth.authorize_button",
+                # redirect_uri="https://encrypto.streamlit.app/component/streamlit_oauth.authorize_button",
+                redirect_uri="https://encrypto-357640249678.us-central1.run.app/component/streamlit_oauth.authorize_button",
                 scope="openid email profile https://www.googleapis.com/auth/drive.file",
                 key="google",
                 extras_params={"prompt": "consent", "access_type": "offline"},
