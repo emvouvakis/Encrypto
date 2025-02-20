@@ -6,7 +6,7 @@ The encrypted passwords can be saved in a local file or in Google Drive.
 
 <br/>
 
-Everyone can find this app published 👉 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://encrypto.streamlit.app/) 👈
+Everyone can find this app published 👉 [![Cloud Run](https://img.shields.io/badge/Cloud_Run-gray?style=flat&logo=google-cloud)](https://encrypto-357640249678.us-central1.run.app) 👈
 
 ## Preview:
 
