@@ -5,6 +5,9 @@ from streamlit_oauth import OAuth2Component
 import base64
 import json
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Customizing app
 def customize():
