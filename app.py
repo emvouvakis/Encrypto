@@ -4,6 +4,7 @@ from tools import Crypt, GoogleDriveHandler
 from streamlit_oauth import OAuth2Component
 import base64
 import json
+import os
 
 # Customizing app
 def customize():
@@ -79,8 +80,8 @@ else:
 if mode=='Google Drive':
 
     # OAuth2 Configuration
-    CLIENT_ID = st.secrets["google_drive"]["CLIENT_ID"]
-    CLIENT_SECRET = st.secrets["google_drive"]["CLIENT_SECRET"]
+    CLIENT_ID = os.environ["CLIENT_ID"]
+    CLIENT_SECRET = os.environ["CLIENT_SECRET"]
 
     AUTHORIZE_ENDPOINT = "https://accounts.google.com/o/oauth2/v2/auth"
     TOKEN_ENDPOINT = "https://oauth2.googleapis.com/token"
